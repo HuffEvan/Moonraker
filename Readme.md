@@ -10,8 +10,8 @@ Use this for a restart or as a template for test functions or ideas
 
 0.1 Controller Beta 
 Connect Driver and CoDriver Controllers to the pc and log controller feed back.
-	- Joystick Feedback Routine
-	- Buttons Initialized
+    - Joystick Feedback Routine
+    - Buttons Initialized
 	
 0.2 Controller
 Add debounce functionality to the buttons so we can prevent triggering of the buttons. And add add a toggle functionality.
@@ -21,23 +21,23 @@ Add debounce functionality to the buttons so we can prevent triggering of the bu
 
 0.3 Driver System Beta
 Initialize the driver system with mapped out ports and configured motors.
-	- List ports on robot map
-	- Define Motors
-	- Configure CANTalons/Jaguars
-	- Configure PID Loop For PID
+    - List ports on robot map
+    - Define Motors
+    - Configure CANTalons/Jaguars
+    - Configure PID Loop For PID
 
 0.4 Controll System
 Develop Multiple Controll Systems to Drivers. 
-	- Tank
-	- Arcade
-	- Arcade (Cheezy Style)
+    - Tank
+    - Arcade
+    - Arcade (Cheezy Style)
     - Indivisual Actuators
 
 0.5 Motion Profiles
 Provide a clean interface for jerk detection to see if we have colided into something and respond to the encounter (Auto Shift Down).
-	- NAVX Implementations
-	- Motion Profiles
-	- Jerk Detection
+    - NAVX Implementations
+    - Motion Profiles
+    - Jerk Detection
 
 ```
 
