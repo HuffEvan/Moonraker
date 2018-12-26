@@ -46,3 +46,5 @@ Provide a clean interface for jerk detection to see if we have colided into some
 | :---------: | :--------------- |
 | Josh Brown  | Lead Programmer  |
 | Evan Huff   | Programmer       |
+
+How to [contribute](http://192.168.1.252:3000/winters-brown/Moonraker/wiki/How+To+Contribute)
