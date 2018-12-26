@@ -15,9 +15,9 @@ Connect Driver and CoDriver Controllers to the pc and log controller feed back.
 	
 0.2 Controller
 Add debounce functionality to the buttons so we can prevent triggering of the buttons. And add add a toggle functionality.
-	- Button Feedback Routine
+    - Button Feedback Routine
     - Debounce
-	- Toggle
+    - Toggle
 
 0.3 Driver System Beta
 Initialize the driver system with mapped out ports and configured motors.
