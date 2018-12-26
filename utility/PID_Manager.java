@@ -1,7 +1,7 @@
 // TODO : Include Package
 // package
 
-public class Pid_Manager {
+public class PID_Manager {
 	private static double P, I, D;
 	private static double Porportional, Integral, Derivative, Previous_Error, Setpoint, Actual;
 	
