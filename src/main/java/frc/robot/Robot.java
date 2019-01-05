@@ -1,9 +1,12 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import frc.robot.subsytem.Chassis;
 
 
 public class Robot extends IterativeRobot {
+
+  private static final Chassis chassis = new Chassis(); 
 
   @Override
   public void robotInit() {
@@ -21,6 +24,7 @@ public class Robot extends IterativeRobot {
 
   @Override
   public void autonomousPeriodic() {
+    chassis.right(1);
   }
 
 
