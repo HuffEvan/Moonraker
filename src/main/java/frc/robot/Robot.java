@@ -1,12 +1,14 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.TimedRobot;
+import frc.robot.controllers.Wingman;
 import frc.robot.subsytem.Chassis;
 
 
-public class Robot extends IterativeRobot {
+public class Robot extends TimedRobot {
 
   private static final Chassis chassis = new Chassis(); 
+  private static final Wingman driver = new Wingman();
 
   @Override
   public void robotInit() {
@@ -24,12 +26,15 @@ public class Robot extends IterativeRobot {
 
   @Override
   public void autonomousPeriodic() {
-    chassis.right(1);
+    chassis.left(0.3);
+    chassis.right(0.3);
   }
 
 
   @Override
   public void teleopPeriodic() {
+    chassis.left(driver.getY());
+    chassis.right(driver.getY());
   }
 
   
