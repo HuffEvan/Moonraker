@@ -5,10 +5,11 @@ import edu.wpi.first.wpilibj.Spark;
 
 public class Elevator{
     private static Spark lift;
-    
+    private static Map oi;
+    oi = new Map();
 
     public Elevator () {
-        lift = new Spark(5);
+        lift = new Spark(oi.lift);
     }
 
     public void lift(double speed){

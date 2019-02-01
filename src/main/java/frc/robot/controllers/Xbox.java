@@ -4,9 +4,11 @@ import edu.wpi.first.wpilibj.Joystick;
 
 public class Xbox {
     private static Joystick Xbox;
+    private static Map oi;
     
     public Xbox(){
-        Xbox = new Joystick(1);
+        oi = new Map();
+        Xbox = new Joystick(oi.CoDriverPort);
     }
 
     public double getLX(){
