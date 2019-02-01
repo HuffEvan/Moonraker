@@ -12,10 +12,9 @@ public class Robot extends TimedRobot {
 
   private static final Chassis chassis = new Chassis(); 
   private static final Wingman driver = new Wingman();
-  private static final Elevator elevator = new Elevator();
   private static final Xbox coDriver = new Xbox();
   private static final Arm arm = new Arm(); 
-  private static final Elevator lift = new Elevator();
+  private static final Elevator elevator = new Elevator();
 
   @Override
   public void robotInit() {
@@ -46,13 +45,6 @@ public class Robot extends TimedRobot {
       arm.open();
     } else {
       arm.closed();   
-    }
-  
-  
-    if (coDriver.getRB() == true) {
-      lift.up();
-    } else {
-      lift.down();
     }
     
   }
