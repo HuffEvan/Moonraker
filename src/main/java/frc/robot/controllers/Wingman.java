@@ -4,6 +4,10 @@ import edu.wpi.first.wpilibj.Joystick;
 
 public class Wingman {
     private static Joystick wingman;
+    private boolean triggerToggle;
+    private boolean triggerToggleStatus;
+    private boolean thumbToggle;
+    private boolean thumbToggleStatus;
     
     public Wingman(){
         wingman = new Joystick(0);
@@ -26,12 +30,32 @@ public class Wingman {
     
     public boolean getThumb(){
         // Thumb Button
-        return wingman.getRawButton(2);
+        if(wingman.getRawButton(2)) {
+            if(thumbToggle){
+                thumbToggleStatus = !thumbToggleStatus;
+                thumbToggle = true;
+            }
+        }else{
+            thumbToggle = false;
+        }
+        
+        return thumbToggle;
+
     }
+
 
     public boolean getTrigger(){
         // Trigger
-        return wingman.getRawButton(1);
+        if(wingman.getRawButton(1)){
+            if(!triggerToggle){
+                triggerToggleStatus = !triggerToggleStatus;
+                triggerToggle = true;
+            }
+        }else{
+            triggerToggle = false;
+        }
+
+        return triggerToggle;
     }
 
     
