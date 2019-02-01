@@ -16,11 +16,11 @@ public class Elevator{
     }
 
     public void up (){
-        lift.set(1);
+        lift.set(1/2);
     }
 
     public void down (){
-        lift.set(-1);
+        lift.set(-1/2);
     }
 
 }
