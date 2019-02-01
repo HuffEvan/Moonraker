@@ -2,16 +2,15 @@ package frc.robot.subsytem;
 
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Spark;
+import frc.robot.Map;
 
 public class Arm{
     private static Solenoid actuator;
     private static Spark axis;
-    private static Map oi;
 
     public Arm () {
-        oi = new Map();
-        actuator = new Solenoid(oi.ArmActuator);
-        axis = new Spark(oi.ArmAxis);
+        actuator = new Solenoid(0);
+        axis = new Spark(5);
     }
 
     public void open (){

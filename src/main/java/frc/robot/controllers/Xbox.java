@@ -1,14 +1,13 @@
 package frc.robot.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
+import frc.robot.Map;
 
 public class Xbox {
     private static Joystick Xbox;
-    private static Map oi;
     
     public Xbox(){
-        oi = new Map();
-        Xbox = new Joystick(oi.CoDriverPort);
+        Xbox = new Joystick(1);
     }
 
     public double getLX(){

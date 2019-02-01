@@ -2,6 +2,7 @@ package frc.robot.subsytem;
 
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import frc.robot.utility.Stick;
+import frc.robot.Map;
 
 public class Chassis {
 
@@ -14,16 +15,12 @@ public class Chassis {
     private static PWMVictorSPX leftSlave;
     private static PWMVictorSPX rightMaster;
     private static PWMVictorSPX rightSlave;
-    private static Map oi;
 
     public Chassis() {
-        stick = new Stick();
-        oi = new Map();
-
-        leftMaster = new PWMVictorSPX(oi.leftMaster);
-        leftSlave = new PWMVictorSPX(oi.leftSlave);
-        rightMaster = new PWMVictorSPX(oi.rightMaster);
-        rightSlave = new PWMVictorSPX(oi.rightSlave);
+        leftMaster = new PWMVictorSPX(0);
+        leftSlave = new PWMVictorSPX(1);
+        rightMaster = new PWMVictorSPX(2);
+        rightSlave = new PWMVictorSPX(3);
 
         stick.print(TAG, "Initalization complete", LEVEL);
         

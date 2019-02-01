@@ -10,12 +10,10 @@ public class Wingman {
     private boolean thumbToggle;
     private boolean thumbToggleStatus;
 
-    private static Map oi;
-    
-    public Wingman(){
-        oi = new Map();
 
-        wingman = new Joystick(oi.DriverPort);
+    public Wingman(){
+
+        wingman = new Joystick(0);
     }
 
     public double getX(){
