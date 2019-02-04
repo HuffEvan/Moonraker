@@ -22,7 +22,7 @@ public class Chassis {
         rightMaster = new PWMVictorSPX(2);
         rightSlave = new PWMVictorSPX(3);
 
-        stick.print(TAG, "Initalization complete", LEVEL);
+        // stick.print(TAG, "Initalization complete", LEVEL);
         
     }
 
@@ -30,38 +30,38 @@ public class Chassis {
         leftMaster.set(speed);
         leftSlave.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
     public void right(double speed) {
         rightMaster.set(speed);
         rightSlave.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
     public void setLeftMaster(double speed){
         leftMaster.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
     public void setLeftSlave(double speed){
         leftSlave.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
     public void setRightMaster(double speed){
         rightSlave.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
     public void setRightSlave(double speed){
         rightSlave.set(speed);
 
-        stick.print(TAG, speed, LEVEL);
+        // stick.print(TAG, speed, LEVEL);
     }
 
 
