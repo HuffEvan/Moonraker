@@ -1,6 +1,7 @@
 package frc.robot.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
+import frc.robot.Map;
 
 public class Xbox {
     private static Joystick Xbox;

@@ -1,6 +1,7 @@
 package frc.robot.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
+import frc.robot.Map;
 
 public class Wingman {
     private static Joystick wingman;
@@ -8,8 +9,10 @@ public class Wingman {
     private boolean triggerToggleStatus;
     private boolean thumbToggle;
     private boolean thumbToggleStatus;
-    
+
+
     public Wingman(){
+
         wingman = new Joystick(0);
     }
 
