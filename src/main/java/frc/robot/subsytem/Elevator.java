@@ -2,13 +2,13 @@ package frc.robot.subsytem;
 
 
 import edu.wpi.first.wpilibj.Spark;
+import frc.robot.Map;
 
 public class Elevator{
     private static Spark lift;
-    
 
     public Elevator () {
-        lift = new Spark(5);
+        lift = new Spark(4);
     }
 
     public void lift(double speed){
