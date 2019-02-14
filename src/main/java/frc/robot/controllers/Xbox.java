@@ -1,7 +1,6 @@
 package frc.robot.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
-import frc.robot.Map;
 
 public class Xbox {
     private static Joystick Xbox;
@@ -50,12 +49,12 @@ public class Xbox {
         return Xbox.getRawButton(6);
     }
 
-    public boolean getYBotton(){
+    public boolean getYButton(){
         // Y Botton
         return Xbox.getRawButton(4);
     }
 
-    public boolean getXBotton(){
+    public boolean getXButton(){
         // X Button
         return Xbox.getRawButton(3);
     }

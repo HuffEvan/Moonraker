@@ -1,35 +1,31 @@
 package frc.robot.subsytem;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import frc.robot.Map;
 
 public class Arm{
-    private static Solenoid actuator;
+    private static DoubleSolenoid actuator;
     private static Spark axis;
 
     public Arm () {
-        actuator = new Solenoid(0);
+        actuator = new DoubleSolenoid(0, 1);
         axis = new Spark(5);
     }
 
     public void open (){
 
-        actuator.set(true);
+        actuator.set(DoubleSolenoid.Value.kOff);
 
     } 
     public void closed (){
 
-        actuator.set(false);
+        actuator.set(DoubleSolenoid.Value.kReverse);
     }
 
-    public void up (){
-        axis.set(1);
-    }
-
-    public void down (){
-        axis.set(-1);
-    }
+   
 
 }
 
