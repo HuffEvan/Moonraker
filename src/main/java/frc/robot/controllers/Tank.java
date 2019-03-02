@@ -1,6 +1,5 @@
 package frc.robot.controllers;
 
-import frc.robot.controllers.Xbox;
 import frc.robot.subsytem.Arm;
 import frc.robot.subsytem.Chassis;
 import frc.robot.subsytem.Elevator;
@@ -8,36 +7,31 @@ import frc.robot.subsytem.Elevator;
 public class Tank {
 
     private static Chassis chassis;
-    private static Xbox controller;
+    private static Wingman controller;
     private static Arm arm;
     private static Elevator elevator;
 
     public Tank(){
-        controller = new Xbox();
+        controller = new Wingman();
         chassis = new Chassis();
-        arm = new Arm();
-        elevator = new Elevator();
     }
 
 
     public void Update(){
- 
+        if (controller.getThumb()) {
+            System.out.println("CHASSIS LEFT = " + (controller.getY() + controller.getX())/2);
+            System.out.println("CHASSIS RIGHT = " + (controller.getY() - controller.getX())/2);
             
-        if (controller.getXButton()) {
-            chassis.right(controller.getLY()/2);
-            chassis.left(controller.getRY()/2);
+            chassis.left((controller.getX() + controller.getY())/2);
+            chassis.right((controller.getX() - controller.getY())/2);
+            
         } else {
-             chassis.right(controller.getLY());
-             chassis.left(controller.getRY());
+            System.out.println("CHASSIS LEFT = " + (controller.getY() + controller.getX()));
+            System.out.println("CHASSIS RIGHT = " + (controller.getY() - controller.getX()));
 
+            chassis.left((controller.getX() + controller.getY()));
+            chassis.right((controller.getX() - controller.getY()));
         }
-
-        if (controller.getLB()) {
-            arm.open();
-        }
-
-        if (controller.getRB()) {
-            arm.closed();
-        }
+        
     }
 }

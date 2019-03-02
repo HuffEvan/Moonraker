@@ -8,7 +8,7 @@ public class Elevator{
     private static PWMVictorSPX lift;
 
     public Elevator () {
-        lift = new PWMVictorSPX(6);
+        lift = new PWMVictorSPX(4);
     }
 
     public void lift(double speed){

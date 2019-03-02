@@ -2,14 +2,12 @@ package frc.robot.controllers;
 
 // The reason this wont build is because were idiots and dont know how to spell
 // import frc.robot.subsytem.Chassis; Is the correct spelling but we call it subsytem
-import frc.robot.subsytem.Chassis;
 import frc.robot.controllers.Xbox;
 import frc.robot.subsytem.Arm;
 import frc.robot.subsytem.Elevator;
 
 public class Arcade{
     private static Xbox controller;
-    private static Chassis chassis;
     private static Arm arm;
     private static Elevator elevator;
 
@@ -22,7 +20,6 @@ public class Arcade{
 
     public Arcade(){
         controller = new Xbox();
-        chassis = new Chassis();
         arm = new Arm();
         elevator = new Elevator();
 
@@ -36,13 +33,13 @@ public class Arcade{
 
     public void Update(){
 
-        if (controller.getXButton()) {
-            chassis.right((controller.getLX() - -controller.getLY())/2);
-            chassis.left((controller.getLX() + -controller.getLY())/2);
-        } else {
-            chassis.right((controller.getLX() - -controller.getLY()));
-            chassis.left((controller.getLX() + -controller.getLY()));
-        }
+        // if (controller.getXButton()) {
+        //     chassis.right((controller.getLX() - -controller.getLY())/2);
+        //     chassis.left((controller.getLX() + -controller.getLY())/2);
+        // } else {
+        //     chassis.right((controller.getLX() - -controller.getLY()));
+        //     chassis.left((controller.getLX() + -controller.getLY()));
+        // }
         
         if (controller.getLB()) {
             arm.open();
@@ -55,7 +52,7 @@ public class Arcade{
         if (controller.getAButton()) {
             elevator.lift(.5);
         } else if (controller.getBButton()) {
-            elevator.lift(-.8);
+            elevator.lift(-1.0);
         } else {
             elevator.lift(0);
         }
