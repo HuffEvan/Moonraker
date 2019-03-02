@@ -11,7 +11,7 @@ public class Arm{
     private static Spark axis;
 
     public Arm () {
-        actuator = new DoubleSolenoid(0, 1);
+        actuator = new DoubleSolenoid(2, 1);
         axis = new Spark(5);
     }
 
