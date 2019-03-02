@@ -1,7 +1,6 @@
 package frc.robot.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
-import frc.robot.Map;
 
 public class Wingman {
     private static Joystick wingman;
@@ -20,10 +19,11 @@ public class Wingman {
         // X Axis
         return wingman.getRawAxis(0);
     }
-    
+
     public double getY(){
         // Y Axis
-        return wingman.getRawAxis(1);
+        return -wingman.getRawAxis(1);
+        
     }
 
     public double getZ(){
