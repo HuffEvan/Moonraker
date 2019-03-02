@@ -11,6 +11,8 @@ public class Arm{
     public Arm () {
         actuator = new Solenoid(6);
         actuator1 = new Solenoid(1);
+
+        axis = new Spark(5);
     }
 
     public void open (){
