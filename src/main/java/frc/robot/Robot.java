@@ -12,8 +12,6 @@ public class Robot extends TimedRobot {
   private static Arcade coDriver;
   private static Compressor compressor;
   private static Camera camera;
-
-  // Test Update
   
   @Override
   public void robotInit() {
